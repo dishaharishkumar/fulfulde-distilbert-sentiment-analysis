@@ -43,7 +43,7 @@ This will load and split the data into training and validation sets.
 Run the following command to train the model:
 
 ```bash
-python train.py --file_path /path/to/fulfulde_sentiment_tsv.tsv --output_dir ./distilbert_fulfulde_sentiment --num_train_epochs 3 --batch_size 16 --logging_dir ./logs --logging_steps 10
+python train.py --file_path /path/to/fulfulde_sentiment_tsv.tsv --output_dir ./distilbert_fulfulde_sentiment --num_train_epochs 3 --train_batch_size 16 --logging_dir ./logs --logging_steps 10
 ```
 
 ### 3. Testing the Model
@@ -51,13 +51,13 @@ python train.py --file_path /path/to/fulfulde_sentiment_tsv.tsv --output_dir ./d
 To test sentiment predictions on predefined sentences, run:
 
 ```bash
-python test.py
+python test.py --sentence 'Heddugol e jam.'
 ```
 
 To test on a custom file with sentences, create a `sentences.txt` file and run:
 
 ```bash
-python test.py --file sentences.txt
+python test.py --file /path/to/sentences.txt
 ```
 
 ## Example Sentences for `sentences.txt`
